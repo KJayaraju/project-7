@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><center>
+    <h1><i>CALCULATOR🖩🧮</i></h1><hr>
+    <input type="text"placeholder="000" id="result">
+    <table>
+        <tr>
+            <td><button onclick="display('7')" class="color">7</button></td>
+            <td><button onclick="display('8')" class="color">8</button></td>
+            <td><button onclick="display('9')" class="color">9</button></td>
+            <td><button onclick="display('+')" class="operator">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display('4')" class="color">4</button></td>
+            <td><button onclick="display('5')" class="color">5</button></td>
+            <td><button onclick="display('6')" class="color">6</button></td>
+            <td><button onclick="display('-')" class="operator">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display('1')" class="color">1</button></td>
+            <td><button onclick="display('2')" class="color">2</button></td>
+            <td><button onclick="display('3')" class="color">3</button></td>
+            <td><button onclick="display('*')" class="operator">*</button></td>
+        </tr> <tr>
+            <td><button onclick="clr()" class="clear">c</button></td>
+            <td><button onclick="display('0')" class="color">0</button></td>
+            <td><button onclick="display('/')" class="operator">/</button></td>
+            <td><button onclick="display('%')" class="operator">%</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="Calculator()" class="clear">=</button></td>
+            <td><button onclick="display('**')" class="gt">x^2</button></td>
+            <td><button onclick="display('.')" class="gt" style=font-size:x-large;>.</button></td>
+             <td><button onclick="display(',')" class="gt" style=font-size:x-large;>,</button></td>
+        </tr>
+    </table>
+<script>
+    var output=document.getElementById("result")
+    function display(num)
+    {
+        output.value+=num;
+    }
+    function Calculator(){
+        try{
+            output.value=eval(output.value);
+        }
+        catch(err){
+            alert("Invalid input");
+        }
+    }
+    function clr(){
+        output.value=""
+    }
+</script><hr>
+<div class="right">
+    <p>&copy;2023 My Calculator.All right are reserved.</p>
+</div>
+</center>
+</body>
+</html>
